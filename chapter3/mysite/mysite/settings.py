@@ -25,7 +25,7 @@ SECRET_KEY = '6fx-0dhdd-rwg3qvpj0s((f#z60xb^5gbu)m5i_+wnm=&5ku)8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ '192.168.56.101', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [ '192.168.56.101', 'localhost', '127.0.0.1' ]
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
+    'books.apps.BooksConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
